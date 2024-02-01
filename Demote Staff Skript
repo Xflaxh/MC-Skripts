@@ -1,0 +1,10 @@
+command /demote <player>:
+    permission: demote
+    trigger:
+        set {player} to argument 1
+        if {player} is op:
+        execute console command "deop %arg-1%"
+	trigger:
+        set {player} to argument 1
+        execute console command "lp user %arg 1% parent set default"
+        send "&4Deoped %arg-1% & Made them member."
